@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+
+    <style>
+
+        body {
+
+            background-color: rgb(66, 66, 66);
+            color: white;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>Iniciando estudos de DOM</h1>
+
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    
+    <div id="click">Clique em mim</div>
+
+    <script>
+
+        var body = document.body
+
+        var p1 = document.body.getElementsByTagName("p")[0]
+        var p2 = document.body.getElementsByTagName("p")[1]
+        var div = document.querySelector("div#click")
+       // var div = document.getElementById("click")
+
+        body.style.backgroundColor = "darkblue"
+
+        p1.innerText  = "error"
+        p1.style.color = 'orange'
+
+        document.writeln("O primeiro parágrafo diz: " + p1.innerText + "</br>")
+        document.writeln("O segundo parágrafo diz: " + p2.innerHTML + "</br>")
+        document.writeln("A div tem: " + div.tagName + "px de largura")
+
+    </script>
+
+</body>
+</html>
