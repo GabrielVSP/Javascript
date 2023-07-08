@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+
+    <style>
+
+        div#area {
+
+            display: block;
+
+            background-color: rebeccapurple;
+            color: rgb(255, 123, 0);
+            font-size: 1.3em;
+            line-height: 200px;
+            text-align: center;
+
+            width: 200px;
+            height: 200px;
+            margin: auto;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!--  onclick="clicked()" onmouseenter="entered()" onmouseleave="leave()" -->
+
+    <div id="area">Interaja comigo...</div>
+
+    <script>
+
+        var div = document.getElementById("area")
+        div.addEventListener("click", clicked)
+        div.addEventListener("mouseenter", entered)
+        div.addEventListener("mouseleave", leave)
+
+        function entered()
+        {
+
+            div.style.background = "red"
+
+        }
+
+        function leave()
+        {
+
+            div.style.background = "rebeccapurple"
+            div.innerText =  "Interaja"
+
+        }
+
+        function clicked()
+        {
+
+            div.innerText = ":)"
+
+        }
+
+    </script>
+
+</body>
+</html>

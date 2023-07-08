@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+
+    <style>
+
+        * {
+
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px;
+            margin: 5px;
+
+        }
+
+        input {
+
+            display: block;
+
+        }
+
+        div {
+
+            font-size: 1.3em;
+            margin-top: 20px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>Somando Valores</h1>
+
+    <input type="number" name="num" id="inum">
+    <input type="number" name="num1" id="inum1">
+    <input type="submit" value="Somar" id="submit">
+
+    <div>A soma entre X e X é: xx</div>
+
+    <script>
+
+        var res = document.body.getElementsByTagName("div")[0]
+
+        var num1 = document.getElementById("inum")
+        var num2 = document.getElementById("inum1")
+        var btn = document.getElementById("submit")
+
+        btn.addEventListener("click", clicked)
+
+        function clicked()
+        {
+
+           res.innerHTML = `A soma entre ${num1.value} e ${num2.value} é: ` + (Number(num1.value) + Number(num2.value))
+
+        }
+
+    </script>
+
+</body>
+</html>
