@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+</head>
+<body>
+    
+    <h1>Nacionalidade</h1>
+
+    <label for="inac">Digite seu país: <input type="text" name="nac" id="inac"></label>
+    <p><input type="submit" value="Enviar" onclick="verify()"></p>
+
+    <p></p>
+
+    <script>
+
+        var nac = document.getElementById("inac")
+        var display = document.body.getElementsByTagName("p")[1]
+
+        function verify()
+        {
+
+            if (nac.value == "Brasil")
+            {
+
+                display.innerText = "Brasileiro"
+
+            }
+            else
+            {
+
+                display.innerText = "Estrangeiro"
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
