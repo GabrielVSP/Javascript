@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+</head>
+<body>
+    
+    <h1>Sistema de multas</h1>
+
+    <p>Velocidade do carro: <input type="number" name="vel" id="ivel">Km</p>
+    <input type="button" value="Verificar" onclick="calcVel()">
+    <p id="display"></p>
+
+    <script>
+
+        var vel = document.getElementById("ivel")
+        var display = document.getElementById("display")
+        var limit = 70
+        var debounce = false
+
+        display.innerHTML = `O carro está a ${vel.value}Km/h e o limite de velocidade  é ${limit}. `
+
+        function calcVel()
+        {
+
+            if (Number(vel.value) > limit && display.innerHTML.length < 5)
+            {
+
+                display.innerHTML += " O carro está <strong>acima</strong> do limite de velocidade"
+
+            }
+            else if (Number(vel.value) < limit && display.innerHTML.length < 5)
+            {
+
+                display.innerHTML += " O carro está <strong>dentro</strong> do limite de velocidade"
+                document.body.getElementsByTagName("strong").style.color = "green"
+
+            }
+
+        }
+
+
+    </script>
+
+</body>
+</html>
