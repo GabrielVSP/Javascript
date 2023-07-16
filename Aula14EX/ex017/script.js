@@ -21,16 +21,16 @@ function makeTab()
 
         let num  = Number(numEl.value)
 
-    for (let i = 1; i <= 10; i++)
-    {
+        for (let i = 1; i <= 10; i++)
+        {
 
-        let textEl = document.createElement("option")
-        textEl.value = `i${i}`
-        textEl.innerHTML = `${num} x ${i} = ${num * i}`
+            let textEl = document.createElement("option")
+            textEl.value = `i${i}`
+            textEl.innerHTML = `${num} x ${i} = ${num * i}`
 
-        select.appendChild(textEl)
+            select.appendChild(textEl)
 
-    }
+        }
 
     }
 
